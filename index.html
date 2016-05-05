@@ -9,12 +9,7 @@ This project is an experiment with Javascript and PHP
 	<head>
 		<meta charset="UTF-8">
 		<link rel="shortcut icon" href="Images\icon.ico"/>
-		<script>
-			function Date() {
-				var date = new Date(day, month, hours, minutes, year);
-				var d = d.getDate();
-			}
-		</script>
+		
 		
 		<title>
 			Welcome to My Experimental Website
@@ -26,15 +21,14 @@ This project is an experiment with Javascript and PHP
 				font-family: arial;
 			}
 			div.main {
-				margin-left: 10%;
-				margin-right: 10%;
+				margin-left: 5%;
+				margin-right: 5%;
 				margin-top: 10px;
 				margin-bottom: 10px;
 				background-color: #6699CE;
 				color: #D1D6EY;
 				padding: 10px;
 				border-radius: 10px;
-				
 			}
 			div#footer {
 				background-color: #222777;
@@ -50,36 +44,19 @@ This project is an experiment with Javascript and PHP
 				font-size: 20;
 				color: #E7EAF6;
 			}
-			#borders {
-				width: 90%;
-				height: 100px;
-				
-			}
 			
 		</style>
 	</head>
 	
 	<body>
-	
-		<!-- <?php
-			echo "Test";
-		?> -->
-		<!-- Top image 
-		<center>
-			<img src="Images\top.png" id="borders">
-		</center>-->
-		
-		
 		<div class="main">
 			<h1 class="titles">
 				Hi, Hello, Hey, Greetings, 'Sup, Yo, Ayy
 			</h1>
 			
-			<p id="Date"></p>
-			
 				Here is where I would put something flashy to show of my great coding skills....
 				</br></br>
-				Something interesting I just learned is that you can use the border-raius tag for divs instead of creating a background image :D
+				Something interesting I just learned is that you can use the border-radius tag for divs instead of creating a background image :D
 				</br></br>
 				My favorite font is Arial. Here's some sample text to test out the layout!
 				</br></br>
@@ -88,12 +65,14 @@ This project is an experiment with Javascript and PHP
 		</div>
 		
 		<div id="footer">
-			<p align="center">
-				Put the date here. Copyright MAP Studios ™ 2015-2019
+			<p id="date"></p>
+			<p>
+				 Copyright MAP Studios ™ 2015-2019 (19 BCE - 2999 CE)
 			</p>
-			<!-- <script>
-				document.getElementById("Date").innerHTML = Date();
-			</script> -->
+
+			<script>
+				document.getElementById("date").innerHTML = Date();
+			</script>
 		</div>
 	</body>
 </html>
