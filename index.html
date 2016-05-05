@@ -1,7 +1,7 @@
 <!--Hey Maya, this is past me telling to you to do this thing already!
-</br>
+
 Thanks, past me. I remember now!
-</br>
+
 This project is an experiment with Javascript and PHP
 -->
 <!DOCTYPE html>
@@ -71,7 +71,12 @@ This project is an experiment with Javascript and PHP
 			</p>
 
 			<script>
-				document.getElementById("date").innerHTML = Date();
+				var d = new Date();
+				var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];.
+				var hour =  (d.getHours() > 12) ? d.getHours - 1:d.getHours;
+				var time = (d.getHours() > 12) ? "am":"pm";
+				
+				document.getElementById("date").innerHTML = d.getMonth() + days[d.getDay()] + ", " + ;
 			</script>
 		</div>
 	</body>
