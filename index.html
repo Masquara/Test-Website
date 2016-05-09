@@ -69,15 +69,33 @@ This project is an experiment with Javascript and PHP
 			<p>
 				 Copyright MAP Studios ™ 2015-2019 (19 BCE - 2999 CE)
 			</p>
-
-			<script>
+			
+		</div>
+		
+		<script>
 				var d = new Date();
-				var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];.
+				var days = ["Sunday","Monday","Tuesday","Wednesday",
+							"Thursday","Friday","Saturday"];
 				var hour =  (d.getHours() > 12) ? d.getHours - 1:d.getHours;
 				var time = (d.getHours() > 12) ? "am":"pm";
-				
-				document.getElementById("date").innerHTML = d.getMonth() + days[d.getDay()] + ", " + ;
-			</script>
-		</div>
+				var month = d.getMonth();
+				switch (month) {
+					case 0:  month = "January";   break;
+					case 1:  month = "February";  break;
+					case 2:  month = "March";     break;
+					case 3:  month = "April";     break;
+					case 4:  month = "May";       break;
+					case 5:  month = "June";      break;
+					case 6:  month = "July";      break;
+					case 7:  month = "August";    break;
+					case 8:  month = "September"; break;
+					case 9:  month = "October";   break;
+					case 10: month = "November";  break;
+					case 11: month = "December";  break;
+				}
+				var day = d.getDate();
+				var year = d.getFullYear();
+				document.getElementById("date").innerHTML = days[d.getDay()] + " " + month + " " + day + ", " + year;;
+			</script>	
 	</body>
 </html>
